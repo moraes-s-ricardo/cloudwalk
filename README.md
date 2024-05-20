@@ -32,12 +32,15 @@ Steps to build a Docker image:
 
     This will configure all that's nedeed to run the DAG and bring them up.
 
-3. Once everything has started up, you should be able to access the airflow UI via [http://localhost:8080/](http://localhost:8080/) on your host machine.
+    **_NOTE:_** Some Windows machines has problems while running bash scripts with Docker. If you receive an error like "env: bash/r" during the build, please make
+                sure the line separator on entrypoint is set to LF instead of CRLF
+
+4. Once everything has started up, you should be able to access the airflow UI via [http://localhost:8080/](http://localhost:8080/) on your host machine.
 
         User: airflow
         Password: airflow
 
-4. Trigger the DAG named gross_domestic_product using the Airflow UI and wait a few seconds
+5. Trigger the DAG named gross_domestic_product using the Airflow UI and wait a few seconds
 
-5. The DAG will generate an HTML file name gdp_report.html on {your_base_path}/cloudwalk/output/. 
+6. The DAG will generate an HTML file name gdp_report.html on {your_base_path}/cloudwalk/output/. 
 You can open it with your prefered browser and see a pivot table and the SQL statement used to create it.
