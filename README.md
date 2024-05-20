@@ -32,7 +32,7 @@ Steps to build a Docker image:
 
     This will configure all that's nedeed to run the DAG and bring them up.
 
-    **_NOTE:_** Some Windows machines has problems while running bash scripts with Docker. If you receive an error like "env: bash/r" during the build, please make
+    **_NOTE:_** Some Windows machines has problems while running bash scripts with Docker. If you receive an error like "bash/r: No such file or directory" during the build, please make
                 sure the line separator on entrypoint is set to LF instead of CRLF
 
 4. Once everything has started up, you should be able to access the airflow UI via [http://localhost:8080/](http://localhost:8080/) on your host machine.
