@@ -92,6 +92,8 @@ def generate_report():
     cursor.execute(years_query)
         
     y = cursor.fetchall()
+
+    y.sort()
     
     list_of_categories = []
     list_of_columns = []
